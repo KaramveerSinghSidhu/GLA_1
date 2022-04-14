@@ -18,8 +18,8 @@
         <div class="col text-center"></div>
         <div class="col text-center"></div>
         <div class="col text-center"></div>
-        <div class="col text-center"><a class="btn btn-primary" href="/add/students"><h5>Add Student</h5></a></div>
-        <div class="col text-center"><a class="btn btn-danger" href="/delete/students"><h5>Delete Student</h5></a></div>
+        <div class="col text-center"><a class="btn btn-primary" href="/add/students">Add Student</a></div>
+        <div class="col text-center"><a class="btn btn-danger" href="/delete/students">Delete Student</a></div>
         <div class="col text-center"></div>
         <div class="col text-center"></div>
         <div class="col text-center"></div>
@@ -35,6 +35,7 @@
                 <h6 class="col">Name</h6>
                 <h6 class="col">Number</h6>
                 <h6 class="col">Age</h6>
+                <h6 class="col">Option</h6>
             </div>
 
             <% students.forEach(student => { %>
@@ -43,11 +44,12 @@
                     <h6 class="col"><%= student.name %></h6>
                     <h6 class="col"><%= student.number %></h6>
                     <h6 class="col"><%= student.age %></h6>
+                    <div class="col"><a class="" href="/student/<%= student._id %>">Edit</a></div>
                 </div>
 
             <% }) %>
 
-        <% } else { %>
+        <% } else if (hasStudnets == false) { %>
             <h6 class="col text-center">No Students in Database</h6>
         <% } %>
     </div>

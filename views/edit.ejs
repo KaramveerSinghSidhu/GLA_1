@@ -15,15 +15,15 @@
         <h1 class="col m-5 text-center">Student Database</h1>
     </div>
     <div class="container mt-5 mb-5">
-        <form class="row m-5" action="/students" method="POST">
+        <form class="row m-5" action="/update/student/<%=student._id%>" method="POST">
             <div class="col"></div>
                 <div class="col bg-light">
                 <h3 class="text-center p-4">Add Student</h3>
-                <div class="row m-1"><input class="m-1 col" type=number id="id" name="id" required placeholder="id" value="<%=idValue%>"></div>
-                <div class="row m-1"><input class="m-1 col" type=text id="name" name="name" required placeholder="name"></div>
-                <div class="row m-1"><input class="m-1 col" type=number id="number" name="number"  required placeholder="number"></div>
-                <div class="row m-1"><input class="m-1 col" type=number id="age" name="age" required placeholder="age"></div>
-                <div class="row m-1 mt-5 mb-3"><button class="btn btn-primary" type="submit">Add Student</button></div>
+                <div class="row m-1"><input class="m-1 col" type=number id="id" name="id" required placeholder="id" value="<%=student.id%>"></div>
+                <div class="row m-1"><input class="m-1 col" type=text id="name" name="name" required placeholder="name" value="<%=student.name%>"></div>
+                <div class="row m-1"><input class="m-1 col" type=number id="number" name="number"  required placeholder="number" value="<%=student.number%>"></div>
+                <div class="row m-1"><input class="m-1 col" type=number id="age" name="age" required placeholder="age" value="<%=student.age%>"></div>
+                <div class="row m-1 mt-5 mb-3"><button class="btn btn-primary" type="submit">Update Student</button></div>
                 <div class="row m-1"><a class="btn btn-secondary" href="/">Cancel</a></div>
                 </div>
                 <div class="col"></div>
